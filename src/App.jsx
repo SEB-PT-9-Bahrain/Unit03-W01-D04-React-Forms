@@ -3,6 +3,7 @@ function App() {
   const [students, setStudents] = useState([])
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const [formData, setFormData] = useState('')
   
   function handleSubmit(event){
     event.preventDefault()
@@ -27,6 +28,13 @@ function App() {
     setLastName(event.target.value)
   }
 
+  function handleChange(event){
+    setFormData({...formData, [event.target.name]:event.target.value})
+  }
+
+  const something = 'firstName'
+  console.log(formData[something])
+
 
   return (
     <div>
@@ -38,16 +46,18 @@ function App() {
 
         <label htmlFor="firstName">First Name:</label>
         <input 
-        value={firstName} 
-        onChange={handleChangeFirstName} 
+        value={formData.firstName} 
+        onChange={handleChange} 
         id="firstName" 
+        name='firstName'
         type="text" 
         />
 
         <label htmlFor="lastName">Last Name:</label>
         <input 
-        value={lastName} 
-        onChange={handleChangeLastName} 
+        value={formData.lastName} 
+        onChange={handleChange} 
+        name="lastName"
         id="lastName" 
         type="text" 
         />
