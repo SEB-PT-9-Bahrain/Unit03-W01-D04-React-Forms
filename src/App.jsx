@@ -13,6 +13,9 @@ function App() {
     }
 
     setStudents([...students,newStudent])
+    setFirstName('')
+    setLastName('')
+
 
   }
 
@@ -34,10 +37,10 @@ function App() {
       <form onSubmit={handleSubmit}>
 
         <label htmlFor="firstName">First Name:</label>
-        <input onChange={handleChangeFirstName} id="firstName" type="text" />
+        <input value={firstName} onChange={handleChangeFirstName} id="firstName" type="text" />
 
         <label htmlFor="lastName">Last Name:</label>
-        <input onChange={handleChangeLastName} id="lastName" type="text" />
+        <input value={lastName} onChange={handleChangeLastName} id="lastName" type="text" />
 
         <button>Create Student</button>
       </form>
