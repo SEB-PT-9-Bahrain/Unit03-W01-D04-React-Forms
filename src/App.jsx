@@ -6,6 +6,14 @@ function App() {
   
   function handleSubmit(event){
     event.preventDefault()
+
+    const newStudent = {
+      firstName: firstName,
+      lastName: lastName
+    }
+
+    setStudents([...students,newStudent])
+
   }
 
   function handleChangeFirstName(event){
