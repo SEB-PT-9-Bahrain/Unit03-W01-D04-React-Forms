@@ -37,10 +37,20 @@ function App() {
       <form onSubmit={handleSubmit}>
 
         <label htmlFor="firstName">First Name:</label>
-        <input value={firstName} onChange={handleChangeFirstName} id="firstName" type="text" />
+        <input 
+        value={firstName} 
+        onChange={handleChangeFirstName} 
+        id="firstName" 
+        type="text" 
+        />
 
         <label htmlFor="lastName">Last Name:</label>
-        <input value={lastName} onChange={handleChangeLastName} id="lastName" type="text" />
+        <input 
+        value={lastName} 
+        onChange={handleChangeLastName} 
+        id="lastName" 
+        type="text" 
+        />
 
         <button>Create Student</button>
       </form>
